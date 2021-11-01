@@ -1,5 +1,6 @@
 import os
 import time
+import platform
 
 inDir = input("IN Directory > ")
 files = os.listdir(inDir)
@@ -7,7 +8,10 @@ files.sort()
 i=0
 
 def clear():
-    os.system("clear")
+    if platform.system()=="Linux":
+        os.system("clear")
+    if platform.system()=="Windows":
+        os.system("cls")
 
 def start():
     global i
