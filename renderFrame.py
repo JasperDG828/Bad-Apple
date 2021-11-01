@@ -30,7 +30,10 @@ def renderFrame(inFile, outDir, n, maxSize):
         out = out + "\n"
         i=i+1
     
+    #filename
+    filename = "00000"[0:-len(str(n))]+str(n)
+
     #Write to file
-    f=open(outDir+f"/frame_{n}.txt", "w+", encoding="utf8")
+    f=open(outDir+f"/frame_{filename}.txt", "w+", encoding="utf8")
     f.write(out)
     f.close()

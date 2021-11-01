@@ -12,9 +12,6 @@ while i<len(files):
     percent = math.floor(i/len(files)*100)
     print(f"\033[96m[TOTAL {i}/{len(files)} => {percent}%]\033[0m Converting {files[i]} to text")
 
-    #filename
-    filename = "00000"[0:-len(str(i))]+str(i)
-
     renderFrame.renderFrame(inDir+"/"+files[i], outDir, i, maxSize)
     i=i+1
 print("\033[92m\033[1mDONE\033[0m")
