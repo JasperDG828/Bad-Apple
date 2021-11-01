@@ -4,10 +4,9 @@ import math
 
 inDir = input("IN Directory > ")
 outDir = input("OUT Directory > ")
-maxSize = float(input("MAX Size > "))
+maxSize = int(input("MAX Size > "))
 files = os.listdir(inDir)
 files.sort()
-print(files)
 i=0
 
 while i<len(files):

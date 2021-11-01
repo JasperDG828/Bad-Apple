@@ -11,6 +11,8 @@ def renderFrame(inFile, outDir, n, maxSize):
     #Rescaling if size is > max
     if width>maxSize or height>maxSize:
         img = img.resize((maxSize, maxSize))
+        width=maxSize
+        height=maxSize
 
     #Converting
     i=0
