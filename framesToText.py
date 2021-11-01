@@ -6,11 +6,13 @@ inDir = input("IN Directory > ")
 outDir = input("OUT Directory > ")
 maxSize = float(input("MAX Size > "))
 files = os.listdir(inDir)
+files.sort()
+print(files)
 i=0
 
 while i<len(files):
     percent = math.floor(i/len(files)*100)
-    print(f"\033[96m[TOTAL {i}/{len(files)} => {percent}%]\033[0m Converting {files[i]} to text")
+    print(f"\033[96m[TOTAL {i+1}/{len(files)} => {percent}%]\033[0m Converting {files[i]} to text")
 
     renderFrame.renderFrame(inDir+"/"+files[i], outDir, i, maxSize)
     i=i+1
