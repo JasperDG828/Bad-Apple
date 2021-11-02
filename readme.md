@@ -39,5 +39,6 @@ The "IN Directory" is the directory where you saved the ASCII-art ("OUT Director
 
 ### Demo
 
-<iframe width="978" height="563" src="https://www.youtube.com/embed/UXCW4gyiFq8" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+(Videos don't seem to work correctly, so <a href="https://youtu.be/UXCW4gyiFq8">here</a> is link)
 
