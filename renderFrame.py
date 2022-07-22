@@ -1,41 +1,44 @@
 from PIL import Image
 import color as c
 
+
 def renderFrame(inFile, outDir, n, maxSize):
 
-    #init vars
+    # init vars
     img = Image.open(inFile)
     width, height = img.size
     out = ""
 
-    #Rescaling if size is > max
-    if width>maxSize or height>maxSize:
+    # Rescaling if size is > max
+    if width > maxSize or height > maxSize:
         img = img.resize((maxSize, maxSize))
-        width=maxSize
-        height=maxSize
+        width = maxSize
+        height = maxSize
 
-    #Converting
-    i=0
-    while i<height:
-        j=0
-        while j<width:
+    # Converting
+    i = 0
+    while i < height:
+        j = 0
+        while j < width:
             v = c.rgb_to_hsv(j, i, img)[2]
-            if v>75:
+            if v > 80:
                 out = out+"  "
-            elif v>50:
+            elif v > 60:
+                out = out+"``"
+            elif v > 40:
                 out = out+"--"
-            elif v>25:
+            elif v > 20:
                 out = out+"=="
             else:
                 out = out+"##"
-            j=j+1
+            j = j+1
         out = out + "\n"
-        i=i+1
-    
-    #filename
+        i = i+1
+
+    # filename
     filename = "00000"[0:-len(str(n))]+str(n)
 
-    #Write to file
-    f=open(outDir+f"/frame_{filename}.txt", "w+", encoding="utf8")
+    # Write to file
+    f = open(outDir+f"/frame_{filename}.txt", "w+", encoding="utf8")
     f.write(out)
     f.close()
