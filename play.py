@@ -5,20 +5,23 @@ import platform
 inDir = input("IN Directory > ")
 files = os.listdir(inDir)
 files.sort()
-i=0
+i = 0
+
 
 def clear():
-    if platform.system()=="Linux":
+    if platform.system() == "Linux":
         os.system("clear")
-    if platform.system()=="Windows":
+    if platform.system() == "Windows":
         os.system("cls")
+
 
 def start():
     global i
-    while i<len(files):
+    while i < len(files):
         print(open(inDir+"/"+files[i]).read())
-        time.sleep(0.03)
+        # time.sleep(0.03)
         clear()
-        i=i+1
+        i = i+1
 
-start() 
+
+start()
