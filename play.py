@@ -19,7 +19,7 @@ def start():
     global i
     while i < len(files):
         print(open(inDir+"/"+files[i]).read())
-        # time.sleep(0.03)
+        time.sleep(0.03)
         clear()
         i = i+1
 
